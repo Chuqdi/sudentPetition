@@ -1,11 +1,11 @@
-  =>  Template Name    : KidKinder - Kindergarten Website Template
+  =>  Template Name    : Pacey Schools - Kindergarten Website Template
 
-  =>  Template Link    : https://htmlcodex.com/kindergarten-website-template
+  =>  Template Link    : https://foyem.com/kindergarten-website-template
 
-  =>  Template License : https://htmlcodex.com/license (or read the LICENSE.txt file)
+  =>  Template License : https://foyem.com/license (or read the LICENSE.txt file)
 
-  =>  Template Author  : HTML Codex
+  =>  Template Author  : Foyem Group
 
-  =>  Author Website   : https://htmlcodex.com
+  =>  Author Website   : https://foyem.com
 
-  =>  About HTML Codex : HTML Codex is one of the top creators and publishers of Free HTML templates, HTML landing pages, HTML email templates and HTML snippets in the world. Read more at ( https://htmlcodex.com/about-us )
+  =>  About Foyem Group : Foyem Group is one of the top creators and publishers of Free HTML templates, HTML landing pages, HTML email templates and HTML snippets in the world. Read more at ( https://foyem.com/about-us )
