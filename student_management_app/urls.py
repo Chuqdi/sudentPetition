@@ -5,8 +5,8 @@ from . import HodViews, StaffViews, StudentViews
 
 
 urlpatterns = [
+    path('', views.home, name="home"),
     path('login/', views.loginPage, name="login"),
-    path('', views.home.as_view(), name="home"),
     path('about/', views.about, name="about"),
     path('blog/', views.blog, name="blog"),
     path('class/', views.classes, name="class"),

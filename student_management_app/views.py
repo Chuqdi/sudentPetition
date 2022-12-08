@@ -6,12 +6,12 @@ from django.contrib import messages
 from django.views import View
 
 from student_management_app.EmailBackEnd import EmailBackEnd
-from django.contrib.auth import authenticate, login, logout
-from django.http import HttpResponseRedirect, HttpResponse
-from django.shortcuts import render, redirect
-from django.contrib import messages
+# from django.contrib.auth import authenticate, login, logout
+# from django.http import HttpResponseRedirect, HttpResponse
+# from django.shortcuts import render, redirect
+# from django.contrib import messages
 
-from student_management_app.EmailBackEnd import EmailBackEnd
+# from student_management_app.EmailBackEnd import EmailBackEnd
 
 
 # def home(request):
