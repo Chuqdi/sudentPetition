@@ -47,18 +47,18 @@
                     <a href="{% url 'home' %}" class="nav-item nav-link">Home</a>
                     <a href="{% url 'about' %}" class="nav-item nav-link active">About</a>
                     <a href="{% url 'class' %}" class="nav-item nav-link">Classes</a>
-                    <a href="{% url 'team' %}" class="nav-item nav-link">Teachers</a>
+                    <a href="{% url 'team' %}" class="nav-item nav-link">Team</a>
                     <a href="{% url 'gallery' %}" class="nav-item nav-link">Gallery</a>
-                    <div class="nav-item dropdown">
+                    <!-- <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
                         <div class="dropdown-menu rounded-0 m-0">
                             <a href=""{% url 'blog' %}"" class="dropdown-item">Blog Grid</a>
                             <a href="{% url 'single' %}" class="dropdown-item">Blog Detail</a>
                         </div>
-                    </div>
+                    </div> -->
                     <a href="{% url 'contact' %}" class="nav-item nav-link">Contact</a>
                 </div>
-                <a href="{% url 'login' %}" class="btn btn-primary px-4">Join Class</a>
+                <a href="{% url 'login' %}" class="btn btn-primary px-4">School Portal</a>
             </div>
         </nav>
     </div>
@@ -87,12 +87,10 @@
                     <img class="img-fluid rounded mb-5 mb-lg-0" src="{% static 'img/about-1.jpg'%}" alt="">
                 </div>
                 <div class="col-lg-7">
-                    <p class="section-title pr-5"><span class="pr-2">Learn About Us</span></p>
-                    <h1 class="mb-4">Best School For Your Kids</h1>
-                    <p>Invidunt lorem justo sanctus clita. Erat lorem labore ea, justo dolor lorem ipsum ut sed eos,
-                        ipsum et dolor kasd sit ea justo. Erat justo sed sed diam. Ea et erat ut sed diam sea ipsum est
-                        dolor</p>
-                    <div class="row pt-2 pb-4">
+                    <p class="section-title pr-5"><span class="pr-2">Learn About Pacey School Management Software</span></p>
+                    <h1 class="mb-4">Best School Software For Your Student</h1>
+                    <p style="text-align:justify">Pacey School Management Software is a complete school web solution that is developed using Python Django, HTML,CSS, JavaScript and Bootstrap. This school web solution is a complete and runnable management system that contains different user interfaces to be manage by different users. </p>
+                    <!-- <div class="row pt-2 pb-4">
                         <div class="col-6 col-md-4">
                             <img class="img-fluid rounded" src="{% static 'img/about-2.jpg'%}" alt="">
                         </div>
@@ -104,7 +102,10 @@
                             </ul>
                         </div>
                     </div>
-                    <a href="" class="btn btn-primary mt-2 py-2 px-4">Learn More</a>
+                    <a href="" class="btn btn-primary mt-2 py-2 px-4">Learn More</a> -->
+
+                    <p class="section-title pr-5"><span class="pr-2">OBJECTIVES OF PACEY SCHOOL MANAGEMENT SOFTWARE</span></p>
+                    <p style="text-align:justify">Pacey school management software is designed to consist of management of Profile, Course, Login, Exam, and Fee details. It controls all data pertaining to profiles, students, fees, and profiles. Since the project was entirely developed on the administrative end, only the administrator is assured full access. </p>
                 </div>
             </div>
         </div>
@@ -116,34 +117,119 @@
     <div class="container-fluid pt-5">
         <div class="container pb-3">
             <div class="row">
-                <div class="col-lg-4 col-md-6 pb-1">
-                    <div class="d-flex bg-light shadow-sm border-top rounded mb-4" style="padding: 30px;">
-                        <i class="flaticon-050-fence h1 font-weight-normal text-primary mb-3"></i>
-                        <div class="pl-4">
-                            <h4>Play Ground</h4>
-                            <p class="m-0">Kasd labore kasd et dolor est rebum dolor ut, clita dolor vero lorem amet elitr vero...</p>
+                <div class="col-lg-4 mb-5">
+                    <div class="card border-0 bg-light shadow-sm pb-2">
+                        <img class="card-img-top mb-2" src="{% static 'img/admin.png'%}" alt="">
+                        <div class="card-body text-center">
+                            <h4 class="card-title">Admin Portals</h4>
+                            <p class="card-text">See Overall Summary Charts of Students Performance, Staffs Performances, Courses, Subjects, Leave, etc.</p>
                         </div>
+                        <div class="card-footer bg-transparent py-4 px-5">
+                            <div class="row border-bottom">
+                                <div class="col-12 py-1 text-center">Manage Staffs</div>
+                            </div>
+                            <div class="row border-bottom">
+                                <div class="col-12 py-1 text-center">Manage Students </div>
+                            </div>
+                            <div class="row border-bottom">
+                                <div class="col-12 py-1 text-center">Manage Course</div>
+                            </div>
+                            <div class="row border-bottom">
+                                <div class="col-12 py-1 text-center">Manage Subjects</div>
+                            </div>
+                            <div class="row border-bottom">
+                                <div class="col-12 py-1 text-center">Manage Sessions</div>
+                            </div>
+                            <div class="row border-bottom">
+                                <div class="col-12 py-1 text-center">View Student Attendance</div>
+                            </div>
+                            <div class="row border-bottom">
+                                <div class="col-12 py-1 text-center">Review & Reply Feedback</div>
+                            </div>
+                            <div class="row border-bottom">
+                                <div class="col-12 py-1 text-center">Review Student/Staff Leave</div>
+                            </div>
+                        </div>
+                        <a href="" class="btn btn-primary px-4 mx-auto mb-4">Join Now</a>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 pb-1">
-                    <div class="d-flex bg-light shadow-sm border-top rounded mb-4" style="padding: 30px;">
-                        <i class="flaticon-022-drum h1 font-weight-normal text-primary mb-3"></i>
-                        <div class="pl-4">
-                            <h4>Music and Dance</h4>
-                            <p class="m-0">Kasd labore kasd et dolor est rebum dolor ut, clita dolor vero lorem amet elitr vero...</p>
+                <div class="col-lg-4 mb-5">
+                    <div class="card border-0 bg-light shadow-sm pb-2">
+                        <img class="card-img-top mb-2" src="{% static 'img/staff.png'%}" alt="">
+                        <div class="card-body text-center">
+                            <h4 class="card-title">Staff/Teachers Portals</h4>
+                            <p class="card-text">See the Overall Summary Charts related to their students, their subjects, leave status, etc.</p>
                         </div>
+                        <div class="card-footer bg-transparent py-4 px-5">
+                            <div class="row border-bottom">
+                                <div class="col-12 py-1 text-center">Take Students Attendance</div>
+                            </div>
+                            <div class="row border-bottom">
+                                <div class="col-12 py-1 text-center">Add Student Scores</div>
+                            </div>
+                            <div class="row border-bottom">
+                                <div class="col-12 py-1 text-center">Update Result</div>
+                            </div>
+                            <div class="row border-bottom">
+                                <div class="col-12 py-1 text-center">Review Student Performance</div>
+                            </div>
+                            <div class="row border-bottom">
+                                <div class="col-12 py-1 text-center">Apply for Leave</div>
+                            </div>
+                            <div class="row border-bottom">
+                                <div class="col-12 py-1 text-center">View Update Attendance</div>
+                            </div>
+                            <div class="row border-bottom">
+                                <div class="col-12 py-1 text-center">Send Feedback to HOD</div>
+                            </div>
+                            <div class="row border-bottom">
+                                <div class="col-12 py-1 text-center">Subjects Attend Chart</div>
+                            </div>
+                        </div>
+                        <a href="" class="btn btn-primary px-4 mx-auto mb-4">Join Now</a>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 pb-1">
-                    <div class="d-flex bg-light shadow-sm border-top rounded mb-4" style="padding: 30px;">
-                        <i class="flaticon-030-crayons h1 font-weight-normal text-primary mb-3"></i>
-                        <div class="pl-4">
-                            <h4>Arts and Crafts</h4>
-                            <p class="m-0">Kasd labore kasd et dolor est rebum dolor ut, clita dolor vero lorem amet elitr vero...</p>
+                <div class="col-lg-4 mb-5">
+                    <div class="card border-0 bg-light shadow-sm pb-2">
+                        <img class="card-img-top mb-2" src="{% static 'img/std.png'%}" alt="">
+                        <div class="card-body text-center">
+                            <h4 class="card-title">Student Portals</h4>
+                            <p class="card-text">See the Overall Summary Charts related to their attendance, their subjects, leave status, etc.</p>
                         </div>
+                        <div class="card-footer bg-transparent py-4 px-5">
+                            <div class="row border-bottom">
+                                <div class="col-12 py-1 text-center">View Attendance</div>
+                            </div>
+                            <div class="row border-bottom">
+                                <div class="col-12 py-1 text-center">View Result </div>
+                            </div>
+                            <div class="row border-bottom">
+                                <div class="col-12 py-1 text-center">View Subject</div>
+                            </div>
+                            <div class="row border-bottom">
+                                <div class="col-12 py-1 text-center">Apply for Leave</div>
+                            </div>
+                            <div class="row border-bottom">
+                                <div class="col-12 py-1 text-center">Send Feedback to HOD</div>
+                            </div>
+                            <div class="row border-bottom">
+                                <div class="col-12 py-1 text-center">Check Outstandings</div>
+                            </div>
+                            <div class="row border-bottom">
+                                <div class="col-12 py-1 text-center">View Statistics by Subjects</div>
+                            </div>
+                            <div class="row border-bottom">
+                                <div class="col-12 py-1 text-center">View Attendance Chart</div>
+                            </div>
+                        </div>
+                        <a href="" class="btn btn-primary px-4 mx-auto mb-4">Join Now</a>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 pb-1">
+            </div>
+        </div>
+    </div>
+
+                <!-- <div class="col-lg-4 col-md-6 pb-1">
                     <div class="d-flex bg-light shadow-sm border-top rounded mb-4" style="padding: 30px;">
                         <i class="flaticon-017-toy-car h1 font-weight-normal text-primary mb-3"></i>
                         <div class="pl-4">
@@ -172,7 +258,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Facilities Start -->
 
 
@@ -311,13 +397,12 @@
             </div>
             <div class="col-lg-3 col-md-6 mb-5">
                 <h3 class="text-primary mb-4">Newsletter</h3>
-                <form action="">
+                <form action="https://gmail.us21.list-manage.com/subscribe/post?u=bd4238f17099390a15f5edc65&amp;id=b7ce8f64f0&amp;f_id=0065c0e1f0" method="post">
                     <div class="form-group">
-                        <input type="text" class="form-control border-0 py-4" placeholder="Your Name" required="required" />
+                        <input type="text" class="form-control border-0 py-4" placeholder="Your Name" required="required" name="FNAME"/>
                     </div>
                     <div class="form-group">
-                        <input type="email" class="form-control border-0 py-4" placeholder="Your Email"
-                            required="required" />
+                        <input type="email" class="form-control border-0 py-4" placeholder="Your Email" name="EMAIL" required="required" />
                     </div>
                     <div>
                         <button class="btn btn-primary btn-block border-0 py-3" type="submit">Submit Now</button>
