@@ -9,23 +9,23 @@
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="{% static "fontawesome-free/css/all.min.css" %}">
+  <link rel="stylesheet" href="{% static 'fontawesome-free/css/all.min.css' %}">
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Tempusdominus Bbootstrap 4 -->
   <link rel="stylesheet" href="{% static 'tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css' %}">
   <!-- iCheck -->
-  <link rel="stylesheet" href="{% static "icheck-bootstrap/icheck-bootstrap.min.css" %}">
+  <link rel="stylesheet" href="{% static 'icheck-bootstrap/icheck-bootstrap.min.css' %}">
   <!-- JQVMap -->
-  <link rel="stylesheet" href="{% static "jqvmap/jqvmap.min.css" %}">
+  <link rel="stylesheet" href="{% static 'jqvmap/jqvmap.min.css' %}">
   <!-- Theme style -->
   <link rel="stylesheet" href="{% static 'dist/css/adminlte.min.css'  %}">
   <!-- overlayScrollbars -->
-  <link rel="stylesheet" href="{% static "overlayScrollbars/css/OverlayScrollbars.min.css" %}">
+  <link rel="stylesheet" href="{% static 'overlayScrollbars/css/OverlayScrollbars.min.css' %}">
   <!-- Daterange picker -->
-  <link rel="stylesheet" href="{% static "daterangepicker/daterangepicker.css" %}">
+  <link rel="stylesheet" href="{% static 'daterangepicker/daterangepicker.css' %}">
   <!-- summernote -->
-  <link rel="stylesheet" href="{% static "summernote/summernote-bs4.css" %}">
+  <link rel="stylesheet" href="{% static 'summernote/summernote-bs4.css' %}">
   <!-- Google Font: Source Sans Pro -->
   {% comment %} <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet"> {% endcomment %}
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -34,6 +34,62 @@
   <link href="{% static 'css/style.css' %}" rel="stylesheet">
 </head>
 
+
+
+
+<body class="">
+  <!-- Navbar Start -->
+<div class="container-fluid bg-light position-relative shadow">
+  <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0 px-lg-5">
+      <a href="" class="navbar-brand font-weight-bold text-secondary" style="font-size: 50px;">
+          {% comment %} <i class="flaticon-043-teddy-bear"></i> {% endcomment %}
+          <span class="text-primary">{{ app_name }}</span>
+      </a>
+      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+          <div class="navbar-nav font-weight-bold mx-auto py-0">
+              <a href="{% url 'home' %}" class="nav-item nav-link active">Home</a>
+              <a href="{% url 'about' %}" class="nav-item nav-link">About</a>
+              <a href="{% url 'team' %}" class="nav-item nav-link">Team</a>
+              
+              <a href="{% url 'contact' %}" class="nav-item nav-link">Contact</a>
+          </div>
+          {% if user.is_authenticated %}
+          <a href="{% url 'dashboard' %}" class="btn btn-primary px-4">Dashboard</a>
+          {% else %}
+          <a href="{% url 'login' %}" class="nav-item nav-link text-primary" style="font-size:1.5em;">Login</a>
+          <a href="{% url 'register' %}" class="btn btn-primary px-4">Register</a>
+          {% endif %}
+      </div>
+  </nav>
+</div>
+<!-- Navbar End -->
+
+
+{% comment %} Display Messages {% endcomment %}
+{% if messages %}
+<div class="col-12">
+  {% for message in messages %}
+    {% if message.tags == "error" %}
+      <div class="alert alert-danger alert-dismissible fade show" role="alert" style="margin-top: 10px;">
+        {{ message }}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      {% else %}
+      <div class="alert alert-success alert-dismissible fade show" role="alert" style="margin-top: 10px;">
+        {{ message }}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    {% endif %}
+  {% endfor %}
+</div>
+{% endif %}
 
 
 {% block content %}

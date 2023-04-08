@@ -1,0 +1,71 @@
+{% extends 'hod_template/base_template.html' %}
+
+{% block page_title %}
+    Update Profile
+{% endblock page_title %}
+
+{% block main_content %}
+
+{% load static %}
+
+<section class="content">
+        <div class="container-fluid">
+
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- general form elements -->
+                    <div class="card card-primary">
+                    <div class="card-header">
+                        <h3 class="card-title">Update Profile</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <!-- form start -->
+                    <form method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+
+
+                        <div class="card-body">
+                            <div class="image" style="display: flex; justify-content: center;">
+                                <img src="{{ user.profile.profile_image }}" class="img-circle elevation-2" alt="User Image" style="    width: 6em;
+                                height: 6em;">
+                              </div>
+                            
+                            <div class="form-group">
+                                <label>First Name </label>
+                                <input type="text" class="form-control" name="firstName" value="{{ user.profile.firstName }}">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Last Name </label>
+                                <input type="text" class="form-control" name="lastName" value="{{ user.profile.lastName }}">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Profile Image</label>
+                                <input type="file" class="form-control" name="profileImage" >
+                            </div>
+
+                            <div class="form-group">
+                                <label>Address </label>
+                                <textarea name="address" class="form-control" row="5">{{ user.profile.address }}</textarea>
+                            </div>
+
+                           
+
+                        </div>
+                        <!-- /.card-body -->
+
+                        <div class="card-footer">
+                        <button type="submit" class="btn btn-primary">Update Profile</button>
+                        </div>
+                    </form>
+                    </div>
+                    <!-- /.card -->
+
+                </div>
+            </div>
+
+        </div><!-- /.container-fluid -->
+      </section>
+
+  {% endblock main_content %}

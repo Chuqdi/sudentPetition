@@ -28,6 +28,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'student_management_app',
+    "petition",
+    "users",
+    "storages"
 ]
 
 MIDDLEWARE = [
@@ -39,7 +42,6 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 
-    'student_management_app.LoginCheckMiddleWare.LoginCheckMiddleWare',
 ]
 
 ROOT_URLCONF = 'student_management_system.urls'
@@ -55,6 +57,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                "context._app.context"
             ],
         },
     },
@@ -123,5 +126,26 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 #For Custom USER
 AUTH_USER_MODEL = "student_management_app.CustomUser"
 
-# Registering Custom Backend "EmailBackEnd"
-AUTHENTICATION_BACKENDS = ['student_management_app.EmailBackEnd.EmailBackEnd']
+LOGIN_URL="login"
+
+
+AWS_ACCESS_KEY_ID = 'AKIAQAVA37IN7WH76HZ2'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_DEFAULT_ACL=None
+AWS_STORAGE_BUCKET_NAME = 'studentpetition'
+AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+AWS_S3_OBJECT_PARAMETERS = {
+    'CacheControl': 'max-age=86400',
+}
+AWS_LOCATION = 'static'
+
+
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static')
+]
+
+STATICFILES_STORAGE = os.path.join(BASE_DIR, 'static')
+STATIC_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
+STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'

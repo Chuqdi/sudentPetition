@@ -5,7 +5,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Pacey Schools</title>
+  <title>{{ app_name }}</title>
   <!-- Favicon -->
   <link href="{% static 'img/favicon.ico'%}" rel="icon">
 
@@ -34,7 +34,7 @@
         <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0 px-lg-5">
             <a href="" class="navbar-brand font-weight-bold text-secondary" style="font-size: 50px;">
                 {% comment %} <i class="flaticon-043-teddy-bear"></i> {% endcomment %}
-                <span class="text-primary">Pacey Schools</span>
+                <span class="text-primary">{{ app_name }}</span>
             </a>
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
@@ -43,16 +43,8 @@
                 <div class="navbar-nav font-weight-bold mx-auto py-0">
                     <a href="{% url 'home' %}" class="nav-item nav-link active">Home</a>
                     <a href="{% url 'about' %}" class="nav-item nav-link">About</a>
-                    <a href="{% url 'class' %}" class="nav-item nav-link">Users</a>
                     <a href="{% url 'team' %}" class="nav-item nav-link">Team</a>
-                    <!-- <a href="{% url 'gallery' %}" class="nav-item nav-link">Gallery</a> -->
-                    <!-- <div class="nav-item dropdown"> -->
-                        <!-- <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
-                        <div class="dropdown-menu rounded-0 m-0">
-                            <a href=""{% url 'blog' %}"" class="dropdown-item">Blog Grid</a>
-                            <a href="{% url 'single' %}" class="dropdown-item">Blog Detail</a>
-                        </div> -->
-                    <!-- </div> -->
+                   
                     <a href="{% url 'contact' %}" class="nav-item nav-link">Contact</a>
                 </div>
                 <a href="{% url 'login' %}" class="btn btn-primary px-4">School Portal</a>
@@ -67,7 +59,7 @@
         <div class="row align-items-center px-3">
             <div class="col-lg-6 text-center text-lg-left">
                 {% comment %} <h4 class="text-white mb-4 mt-5 mt-lg-0">Kids Learning Center</h4> {% endcomment %}
-                <h1 class="display-3 font-weight-bold text-white">Welcome To Pacey Schools</h1>
+                <h1 class="display-3 font-weight-bold text-white">Welcome To {{ app_name }}</h1>
                 <p class="text-white mb-4">Sea ipsum kasd eirmod kasd magna, est sea et diam ipsum est amet sed sit.
                     Ipsum dolor no justo dolor et, lorem ut dolor erat dolore sed ipsum at ipsum nonumy amet. Clita
                     lorem dolore sed stet et est justo dolore.</p>
@@ -364,8 +356,21 @@
     <!-- Registration End -->
 
 
+
+
+
+
+
+
+
+
+
+
+
+    
+
     <!-- Team Start -->
-    <div class="container-fluid pt-5">
+    <!-- <div class="container-fluid pt-5">
         <div class="container">
             <div class="text-center pb-2">
                 <p class="section-title px-5"><span class="px-2">Our Team</span></p>
@@ -438,8 +443,25 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Team End -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <!-- Dashboard Slider Start -->
 
@@ -601,7 +623,7 @@
             <div class="col-lg-3 col-md-6 mb-5">
                 <a href="" class="navbar-brand font-weight-bold text-primary m-0 mb-4 p-0" style="font-size: 40px; line-height: 40px;">
                     <i class="flaticon-043-teddy-bear"></i>
-                    <span class="text-white">Pacey Schools</span>
+                    <span class="text-white">{{ app_name }}</span>
                 </a>
                 <p style="text-align: justify;">Pacey Education Management Software is a web application, unlike computer-based software programs that operate locally on the device’s operating system which runs on a web server. The user uses a web browser with an active network connection to access web apps. </p>
                 <div class="d-flex justify-content-start mt-4">
@@ -644,7 +666,6 @@
                 <div class="d-flex flex-column justify-content-start">
                     <a class="text-white mb-2" href="{% url 'home' %}"><i class="fa fa-angle-right mr-2"></i>Home</a>
                     <a class="text-white mb-2" href="{% url 'about' %}"><i class="fa fa-angle-right mr-2"></i>About Us</a>
-                    <a class="text-white mb-2" href="{% url 'class' %}"><i class="fa fa-angle-right mr-2"></i>Our Classes</a>
                     <a class="text-white mb-2" href="{% url 'team' %}"><i class="fa fa-angle-right mr-2"></i>Our Team</a>
                     <!-- <a class="text-white mb-2" href="{% url 'blog' %}"><i class="fa fa-angle-right mr-2"></i>Our Blog</a> -->
                     <a class="text-white" href="{% url 'contact' %}"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
@@ -667,7 +688,7 @@
         </div>
         <div class="container-fluid pt-5" style="border-top: 1px solid rgba(23, 162, 184, .2);;">
             <p class="m-0 text-center text-white">
-                &copy; <a class="text-primary font-weight-bold" href="#">Pacey Schools</a>. All Rights Reserved. Designed
+                &copy; <a class="text-primary font-weight-bold" href="#">{{ app_name }}</a>. All Rights Reserved. Designed
                 by
                 <a class="text-primary font-weight-bold" href="https://foyem.com">Foyem Group</a>
             </p>

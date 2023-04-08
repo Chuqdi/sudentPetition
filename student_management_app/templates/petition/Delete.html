@@ -1,0 +1,54 @@
+{% extends 'hod_template/base_template.html' %}
+
+{% block page_title %}
+Submit Petition
+{% endblock page_title %}
+
+{% block main_content %}
+
+{% load static %}
+
+<section class="content">
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-md-12">
+                <!-- general form elements -->
+                <div class="card card-primary">
+                    <div class="card-header">
+                        <h3 class="card-title">Delete Petition</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <!-- form start -->
+                    <form method="post">
+                        <div class="text-lg text-danger p-2">
+                            This action will delete your petition permanently, do you want to continue?
+                        </div>
+                        {% csrf_token %}
+                        <div class="card-body">
+                            {{ form }}
+                        </div>
+
+                        <div class="card-footer">
+                            <div class="row">
+                                <div class="col-6">
+                                    <button type="submit" class="btn btn-danger">Continue</button>
+                                </div>
+
+                                
+                            </div>
+                            
+
+                        </div>
+                    </form>
+                  
+                </div>
+                <!-- /.card -->
+
+            </div>
+        </div>
+
+    </div><!-- /.container-fluid -->
+</section>
+
+{% endblock main_content %}
