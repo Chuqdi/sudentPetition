@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse, HttpResponseRedirect, JsonResponse
 from django.contrib import messages
-
+from petition.models import Petitions
 from django.urls import reverse
 from django.views.decorators.csrf import csrf_exempt
 import json
@@ -9,7 +9,8 @@ import json
 
 
 def dashboard(request):
-    context ={}
+    petitions = Petitions.objects.filter(created_by=request.user)
+    context ={"petitions":petitions}
     return render(request, "hod_template/home_content.html", context)
 
 

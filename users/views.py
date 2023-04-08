@@ -43,7 +43,7 @@ def editProfile(request):
 
 
 
-    return render(request, "users/profile.html")
+    return render(request, "users/Profile.html")
 
 
 
